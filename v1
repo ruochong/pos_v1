@@ -1,4 +1,6 @@
-1：输入条码信息getbarcode[
+#1
+get barcode and count of every pruduct,count 为实际的数量
+input barcodelist[
   'ITEM000001',
   'ITEM000001',
   'ITEM000001',
@@ -9,44 +11,51 @@
   'ITEM000005',
   'ITEM000005'
 ]
-split函数分出所有带"-"的条码和数量的二维数组
-输出getbarcode1[["ITEM000003,2]...[] ];
-2：输入条码信息getbarcode[
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000003-2',
-  'ITEM000005',
-  'ITEM000005',
-  'ITEM000005'
-]
-用substring函数输出只含有条码信息的数组getbarcode[
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000001',
-  'ITEM000003',
-  'ITEM000005',
-  'ITEM000005',
-  'ITEM000005'
-];然后去重，再与getbarcode2数组合并，得到count 为未判断优惠的count
-输出数组对像getbarcode3[{baocode:" ",
-count: " "
-perPrice}....]
-3:输入getbarcode3,判断count，计算节省后的小计
-输出新的对象数组getbarcode[{barcode:
-wtthDiacountCount:
-price:
-perPrice
-savePrice:}....]
-4:计算总计
-5：打印函数
-
-
-
-
-
+output barcodeWithCount[{barcode:"string",count:"str"}....]  25min
+#2
+get每件商品的小计（未优惠的) 名称name 单价 小计perPrice
+input barcodeWithCount  and  infProduct[
+{
+   barcode: 'ITEM000000',
+   name: '可口可乐',
+   unit: '瓶',
+   price: 3.00
+}
+.......................................]
+output
+posList[
+{
+barcode:"",
+name:"",
+unit:"",
+ptice:"",
+perPrice:""}....]                                           10min
+#3
+计算打折金额disPrice和实际每件商品的小计truePrice
+input  posList and促销信息的数组loadPromotions[],
+output  
+wtihPricePOsList[
+{
+barcode:"",
+name:"",
+unit:"",
+ptice:"",
+perPrice:"",
+disPric:"",
+truePrice:"",
+}....]                                                     10min
+#4
+计算总计
+input wtihPricePOsList
+output allPrice number                                    5min
+#5
+计算优惠总金额
+input wtihPricePOsList
+output allProPrice  number类型                                6min
+#6
+写输出result
+input  allProPrice  allPrice  and  wtihPricePOsList
+output  result str类型                                      10min
+#7
+打印                                                          1min
 
