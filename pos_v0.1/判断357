@@ -1,0 +1,21 @@
+#1
+判断num含不含数字3
+input num
+output expectResult{incclude3:true,}
+#2
+判断数字是不是3的倍数
+
+input  expectResult
+output  expectRecult={incclude3:true,times3:true}
+        
+#3
+判断是不是5的倍数
+input expectResult
+output  exprctResult={incclude3:true,times3:true,times5:}
+       
+#4
+判断是不是7的倍数
+input  expectResult
+output  expectREsult={incclude3:true,times3:true,times5:,times7:}
+#5
+打印  expectResult
